@@ -1,0 +1,125 @@
+=================================================================
+CS 433 Programming assignment 5
+Author: xxxxxx and xxxxxxx
+Date: xx/xx/20xx
+Course: CS433 (Operating Systems)
+Description : Program to simulate different page replacement algorithms
+=================================================================
+
+Page size = 1024 bytes
+Physical Memory size = 524288 bytes
+Number of pages = 4194304
+Initial number of physical frames = 512
+
+================================Test 1==================================================
+Logical address: 4141, 	 page number: 414, 	 frame number = 0, 	 is page fault? 0
+Logical address: 13109, 	 page number: 1310, 	 frame number = 0, 	 is page fault? 1
+Logical address: 23573, 	 page number: 2357, 	 frame number = 0, 	 is page fault? 1
+Logical address: 3643, 	 page number: 364, 	 frame number = 0, 	 is page fault? 0
+Logical address: 2408, 	 page number: 240, 	 frame number = 0, 	 is page fault? 0
+Logical address: 23345, 	 page number: 2334, 	 frame number = 0, 	 is page fault? 1
+Logical address: 29530, 	 page number: 2953, 	 frame number = 0, 	 is page fault? 1
+Logical address: 15365, 	 page number: 1536, 	 frame number = 0, 	 is page fault? 1
+Logical address: 16765, 	 page number: 1676, 	 frame number = 0, 	 is page fault? 1
+Logical address: 6620, 	 page number: 662, 	 frame number = 0, 	 is page fault? 1
+Logical address: 217, 	 page number: 21, 	 frame number = 0, 	 is page fault? 0
+Logical address: 15432, 	 page number: 1543, 	 frame number = 0, 	 is page fault? 1
+Logical address: 14006, 	 page number: 1400, 	 frame number = 0, 	 is page fault? 1
+Logical address: 1898, 	 page number: 189, 	 frame number = 0, 	 is page fault? 0
+Logical address: 17094, 	 page number: 1709, 	 frame number = 0, 	 is page fault? 1
+Logical address: 32757, 	 page number: 3275, 	 frame number = 0, 	 is page fault? 1
+Logical address: 21396, 	 page number: 2139, 	 frame number = 0, 	 is page fault? 1
+Logical address: 27748, 	 page number: 2774, 	 frame number = 0, 	 is page fault? 1
+Logical address: 1883, 	 page number: 188, 	 frame number = 0, 	 is page fault? 0
+Logical address: 25840, 	 page number: 2584, 	 frame number = 0, 	 is page fault? 1
+Logical address: 25784, 	 page number: 2578, 	 frame number = 0, 	 is page fault? 1
+Logical address: 28665, 	 page number: 2866, 	 frame number = 0, 	 is page fault? 1
+Logical address: 29143, 	 page number: 2914, 	 frame number = 0, 	 is page fault? 1
+Logical address: 30473, 	 page number: 3047, 	 frame number = 0, 	 is page fault? 1
+Logical address: 9731, 	 page number: 973, 	 frame number = 0, 	 is page fault? 1
+Logical address: 150, 	 page number: 15, 	 frame number = 0, 	 is page fault? 0
+Logical address: 4295, 	 page number: 429, 	 frame number = 0, 	 is page fault? 0
+Logical address: 15661, 	 page number: 1566, 	 frame number = 0, 	 is page fault? 1
+Logical address: 11005, 	 page number: 1100, 	 frame number = 0, 	 is page fault? 1
+Logical address: 10934, 	 page number: 1093, 	 frame number = 0, 	 is page fault? 1
+Logical address: 10628, 	 page number: 1062, 	 frame number = 0, 	 is page fault? 1
+Logical address: 26333, 	 page number: 2633, 	 frame number = 0, 	 is page fault? 1
+Logical address: 9843, 	 page number: 984, 	 frame number = 0, 	 is page fault? 1
+Logical address: 20986, 	 page number: 2098, 	 frame number = 0, 	 is page fault? 1
+Logical address: 23805, 	 page number: 2380, 	 frame number = 0, 	 is page fault? 1
+Logical address: 28128, 	 page number: 2812, 	 frame number = 0, 	 is page fault? 1
+Logical address: 21861, 	 page number: 2186, 	 frame number = 0, 	 is page fault? 1
+Logical address: 124, 	 page number: 12, 	 frame number = 0, 	 is page fault? 0
+Logical address: 2486, 	 page number: 248, 	 frame number = 0, 	 is page fault? 0
+Logical address: 53, 	 page number: 5, 	 frame number = 0, 	 is page fault? 0
+Logical address: 4383, 	 page number: 438, 	 frame number = 0, 	 is page fault? 0
+Logical address: 16481, 	 page number: 1648, 	 frame number = 0, 	 is page fault? 1
+Logical address: 3857, 	 page number: 385, 	 frame number = 0, 	 is page fault? 0
+Logical address: 17996, 	 page number: 1799, 	 frame number = 0, 	 is page fault? 1
+Logical address: 19621, 	 page number: 1962, 	 frame number = 0, 	 is page fault? 1
+Logical address: 13229, 	 page number: 1322, 	 frame number = 0, 	 is page fault? 1
+Logical address: 21965, 	 page number: 2196, 	 frame number = 0, 	 is page fault? 1
+Logical address: 22902, 	 page number: 2290, 	 frame number = 0, 	 is page fault? 1
+Logical address: 340, 	 page number: 34, 	 frame number = 0, 	 is page fault? 0
+Logical address: 24155, 	 page number: 2415, 	 frame number = 0, 	 is page fault? 1
+Logical address: 16844, 	 page number: 1684, 	 frame number = 0, 	 is page fault? 1
+Logical address: 32409, 	 page number: 3240, 	 frame number = 0, 	 is page fault? 1
+Logical address: 20167, 	 page number: 2016, 	 frame number = 0, 	 is page fault? 1
+Logical address: 22190, 	 page number: 2219, 	 frame number = 0, 	 is page fault? 1
+Logical address: 28953, 	 page number: 2895, 	 frame number = 0, 	 is page fault? 1
+Logical address: 31016, 	 page number: 3101, 	 frame number = 0, 	 is page fault? 1
+Logical address: 20984, 	 page number: 2098, 	 frame number = 0, 	 is page fault? 1
+Logical address: 20418, 	 page number: 2041, 	 frame number = 0, 	 is page fault? 1
+Logical address: 27689, 	 page number: 2768, 	 frame number = 0, 	 is page fault? 1
+Logical address: 2642, 	 page number: 264, 	 frame number = 0, 	 is page fault? 0
+Logical address: 30631, 	 page number: 3063, 	 frame number = 0, 	 is page fault? 1
+Logical address: 12902, 	 page number: 1290, 	 frame number = 0, 	 is page fault? 1
+Logical address: 11105, 	 page number: 1110, 	 frame number = 0, 	 is page fault? 1
+Logical address: 28794, 	 page number: 2879, 	 frame number = 0, 	 is page fault? 1
+Logical address: 19968, 	 page number: 1996, 	 frame number = 0, 	 is page fault? 1
+Logical address: 14382, 	 page number: 1438, 	 frame number = 0, 	 is page fault? 1
+Logical address: 5593, 	 page number: 559, 	 frame number = 0, 	 is page fault? 1
+Logical address: 31464, 	 page number: 3146, 	 frame number = 0, 	 is page fault? 1
+Logical address: 6520, 	 page number: 652, 	 frame number = 0, 	 is page fault? 1
+Logical address: 15555, 	 page number: 1555, 	 frame number = 0, 	 is page fault? 1
+Logical address: 23904, 	 page number: 2390, 	 frame number = 0, 	 is page fault? 1
+Logical address: 1470, 	 page number: 147, 	 frame number = 0, 	 is page fault? 0
+Logical address: 12536, 	 page number: 1253, 	 frame number = 0, 	 is page fault? 1
+Logical address: 14718, 	 page number: 1471, 	 frame number = 0, 	 is page fault? 1
+Logical address: 23488, 	 page number: 2348, 	 frame number = 0, 	 is page fault? 1
+Logical address: 29229, 	 page number: 2922, 	 frame number = 0, 	 is page fault? 1
+Logical address: 25917, 	 page number: 2591, 	 frame number = 0, 	 is page fault? 1
+Logical address: 7989, 	 page number: 798, 	 frame number = 0, 	 is page fault? 1
+Logical address: 21827, 	 page number: 2182, 	 frame number = 0, 	 is page fault? 1
+Logical address: 28392, 	 page number: 2839, 	 frame number = 0, 	 is page fault? 1
+Logical address: 30591, 	 page number: 3059, 	 frame number = 0, 	 is page fault? 1
+Logical address: 597, 	 page number: 59, 	 frame number = 0, 	 is page fault? 0
+Logical address: 17525, 	 page number: 1752, 	 frame number = 0, 	 is page fault? 1
+Logical address: 9433, 	 page number: 943, 	 frame number = 0, 	 is page fault? 1
+Logical address: 25424, 	 page number: 2542, 	 frame number = 0, 	 is page fault? 1
+Logical address: 19761, 	 page number: 1976, 	 frame number = 0, 	 is page fault? 1
+Logical address: 4908, 	 page number: 490, 	 frame number = 0, 	 is page fault? 0
+Logical address: 7188, 	 page number: 718, 	 frame number = 0, 	 is page fault? 1
+Logical address: 32712, 	 page number: 3271, 	 frame number = 0, 	 is page fault? 1
+Logical address: 27802, 	 page number: 2780, 	 frame number = 0, 	 is page fault? 1
+Logical address: 25798, 	 page number: 2579, 	 frame number = 0, 	 is page fault? 1
+Logical address: 27913, 	 page number: 2791, 	 frame number = 0, 	 is page fault? 1
+Logical address: 15327, 	 page number: 1532, 	 frame number = 0, 	 is page fault? 1
+Logical address: 10928, 	 page number: 1092, 	 frame number = 0, 	 is page fault? 1
+Logical address: 21938, 	 page number: 2193, 	 frame number = 0, 	 is page fault? 1
+Logical address: 4605, 	 page number: 460, 	 frame number = 0, 	 is page fault? 0
+Logical address: 31258, 	 page number: 3125, 	 frame number = 0, 	 is page fault? 1
+Logical address: 11255, 	 page number: 1125, 	 frame number = 0, 	 is page fault? 1
+Logical address: 21554, 	 page number: 2155, 	 frame number = 0, 	 is page fault? 1
+Logical address: 27835, 	 page number: 2783, 	 frame number = 0, 	 is page fault? 1
+================================End of Test 1==================================================
+================================Test 2==================================================
+****************Simulate FIFO replacement****************************
+Number of page faults: 		6421708
+Elapsed time = 1.58781 seconds
+****************Simulate LIFO replacement****************************
+Number of page faults: 		6421748
+Elapsed time = 1.75619 seconds
+****************Simulate LRU replacement****************************
+Number of page faults: 		6421748
+Elapsed time = 4.701 seconds
